@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   get '/schedule', to: 'static_pages#schedule'
 
-  get '/classes', to: 'static_pages#classes'
+  get '/classes', to: 'class_pages#index'
 
   get '/contact', to: 'static_pages#contact'
 
