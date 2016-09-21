@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :class_pages
+  #resources :class_pages
+
+  resources :class_pages, :path => 'classes' do
+    resources :show
+  end
 
   root 'static_pages#home'
   get '/teachers', to: 'static_pages#teachers'
