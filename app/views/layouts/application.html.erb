@@ -1,14 +1,44 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MbmsDev</title>
+    <title><%= yield(:title) %> | Monterey Bay Meditation Studio</title>
     <%= csrf_meta_tags %>
+
+    <%= render 'layouts/basic_page_needs' %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%= render 'layouts/header' %>
   </head>
 
   <body>
-    <%= yield %>
+  	<div class="container">
+    	<div class="row">
+
+
+
+        <% if current_page?(classes_path) %>
+          <div class="two columns">
+            <%= render 'layouts/sidebar_classes' %>
+          </div>
+
+          <div class="seven columns" style="background-color:white">
+            <%= yield %>
+          </div>
+        <% else %>
+          <div class="nine columns">
+      			<%= yield %>
+      		</div>
+    		<% end %>
+
+
+				<div class="three columns">
+    			<!--sidebar will go here-->
+    			<%= render 'layouts/sidebar' %>
+				</div>
+			</div>
+		</div>
+		<%= render 'layouts/footer' %>
   </body>
 </html>
