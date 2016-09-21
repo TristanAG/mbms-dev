@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Class Pages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Class title</th>
+      <th>Class content</th>
+      <th>Order position</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @class_pages.each do |class_page| %>
+      <tr>
+        <td><%= class_page.class_title %></td>
+        <td><%= class_page.class_content %></td>
+        <td><%= class_page.order_position %></td>
+        <td><%= link_to 'Show', class_page %></td>
+        <td><%= link_to 'Edit', edit_class_page_path(class_page) %></td>
+        <td><%= link_to 'Destroy', class_page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Class Page', new_class_page_path %>

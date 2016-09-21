@@ -1,0 +1,2 @@
+class ClassPage < ApplicationRecord
+end
