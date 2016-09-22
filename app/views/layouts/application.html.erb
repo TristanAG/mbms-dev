@@ -16,19 +16,11 @@
   	<div class="container">
     	<div class="row">
 
-        <% if request.path.split('/')[1] == "classes" %>
-          <div class="two columns">
-            <%= render 'layouts/sidebar_classes' %>
-          </div>
+        <div class="nine columns">
+          <%= yield %>
+        </div>
 
-          <div class="seven columns" style="background-color:white">
-            <%= yield %>
-          </div>
-        <% else %>
-          <div class="nine columns">
-      			<%= yield %>
-      		</div>
-    		<% end %>
+        
 
 				<div class="three columns">
     			<%= render 'layouts/sidebar' %>

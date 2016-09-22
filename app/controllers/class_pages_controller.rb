@@ -10,7 +10,7 @@ class ClassPagesController < ApplicationController
   # GET /class_pages/1
   # GET /class_pages/1.json
   def show
-    @class_pages = ClassPage.order("order_position ASC").all
+    #@class_pages = ClassPage.order("order_position ASC").all
   end
 
   # GET /class_pages/new
@@ -20,6 +20,7 @@ class ClassPagesController < ApplicationController
 
   # GET /class_pages/1/edit
   def edit
+
   end
 
   # POST /class_pages
@@ -61,6 +62,8 @@ class ClassPagesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
