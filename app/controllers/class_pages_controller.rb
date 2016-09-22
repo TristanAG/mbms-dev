@@ -4,13 +4,13 @@ class ClassPagesController < ApplicationController
   # GET /class_pages
   # GET /class_pages.json
   def index
-
     @class_pages = ClassPage.order("order_position ASC").all
   end
 
   # GET /class_pages/1
   # GET /class_pages/1.json
   def show
+    @class_pages = ClassPage.order("order_position ASC").all
   end
 
   # GET /class_pages/new
