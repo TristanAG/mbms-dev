@@ -4,34 +4,35 @@
       <%= render 'layouts/sidebar_classes' %>
     </div>
 
-    <div class="seven columns" style="background-color:white">
-      <h4 class="basicheader">Classes</h4>
+    <div class="seven columns">
+      <div class="content">
+        <h4 class="basicheader">Our Offerings</h4>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Class title</th>
-            <th>Class content</th>
-            <th>Order position</th>
-            <th colspan="3"></th>
-          </tr>
-        </thead>
+        <%= link_to 'New Class Page', new_class_page_path %>
 
-        <tbody>
-          <% @class_pages.each do |class_page| %>
-            <tr>
-              <td><%= class_page.class_title %></td>
-              <td><%= class_page.class_content %></td>
-              <td><%= class_page.order_position %></td>
-              <td><%= link_to 'Show', class_page %></td>
-              <td><%= link_to 'Edit', edit_class_page_path(class_page) %></td>
-              <td><%= link_to 'Destroy', class_page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
+          <div class="sub-header">General Class Info</div>
+            <p>
+              The Studio provides opportunities to meet yourself and others in a unique, mindful, and compassionate way.<br />
+              <br />
+              Doors open 10 minutes before the start time. Please arrive a few minutes early to settle in.<br />
+              <br />
+              For any event designated as “drop-in,” there is no need to pre-register-- simply take note of an event on the calendar and attend!
+              <br /><br />
+              Courses, workshops, and retreats may be held at the studio or at another location in the community according to the needs of the event and size of the group.
+              <br /><br />
+              Browse classes from the menu to the left
+              <br /><br />
+              Click on a class for more info
+              <br /><br />
+              To view classes by day and time, see the <a href="../schedule.php">Schedule</a>
+            </p>
+            <div class="sub-sub-header"><a href="http://montereybaymeditation.com/personal-practice-coaching.php">Personal Practice & Coaching</a></div>
+            <p>
+              We offer individualized instruction, practice, and mindfulness coaching for those who would benefit from a one-on-one environment or who would like a session or program designed for their specific group. We are happy to discuss your needs.
+            </p>
 
-      <br>
 
-      <%= link_to 'New Class Page', new_class_page_path %>
+
+
+      </div>
     </div>

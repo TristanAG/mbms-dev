@@ -6,22 +6,21 @@
 
   <div class="seven columns" style="background-color:white">
 
-      <p>
-        <strong>Class title:</strong>
-        <%= @class_page.class_title %>
-      </p>
+      <div class="content">
+        <h4 class="basicheader"> <%= @class_page.class_title %></h4>
 
-      <p>
-        <strong>Class content:</strong>
-        <%= @class_page.class_content %>
-      </p>
+        <p>
+          <strong>Order position:</strong>
+          <%= @class_page.order_position %>
+        </p>
 
-      <p>
-        <strong>Order position:</strong>
-        <%= @class_page.order_position %>
-      </p>
+        <p>
+          <%= simple_format(@class_page.class_content) %>
+        </p>
 
-      <%= link_to 'Edit', edit_class_page_path(@class_page) %> |
-      <%= link_to 'Back', class_pages_path %> |
-      <%= link_to 'Destroy', class_page_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+        <%= link_to 'Edit', edit_class_page_path(@class_page) %> |
+        <%= link_to 'Back', class_pages_path %> |
+        <%= link_to 'Destroy', class_page_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
     </div>
