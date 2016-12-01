@@ -74,6 +74,6 @@ class ClassPagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def class_page_params
-      params.require(:class_page).permit(:class_title, :class_content, :order_position)
+      params.require(:class_page).permit(:class_title, :class_photo, :class_content, :order_position)
     end
 end

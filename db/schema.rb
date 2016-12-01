@@ -10,15 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160921223859) do
+ActiveRecord::Schema.define(version: 20161201192531) do
 
   create_table "class_pages", force: :cascade do |t|
     t.string   "class_title"
     t.text     "class_content"
     t.integer  "order_position"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
     t.string   "slug"
+    t.string   "class_photo_file_name"
+    t.string   "class_photo_content_type"
+    t.integer  "class_photo_file_size"
+    t.datetime "class_photo_updated_at"
     t.index ["slug"], name: "index_class_pages_on_slug"
   end
 
